@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/tag_viewer.css">
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2 side-panel">
+           <div class="top-header">
+             <div class="logo">Tag Viewer</div>
+           </div>
+        </div>
+        <div class="col-md-10">
+          <div class="top-header">
+            <form id="sform" method="POST" action="/ajax/fetch">
+              <div class="url-bar">
+                <input class="input-url" type="text" name="url" placeholder="Type an URL here" value="">
+              </div>
+              <input class="fetch-btn" type="submit" value="Fetch">
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2 summary-panel side-panel">
+          <div class="options">
+            <span>Sort By:</span>
+            <select id="sort-options" name="sort">
+              <option value="name_asc">Name: A to Z</option>
+              <option value="name_desc">Name: Z to A</option>
+              <option value="count_asc">Count: fewest to most</option>
+              <option value="count_desc">Count: most to fewest</option>
+            </select>
+          </div>
+          <div id="summary">
+          </div>
+        </div>
+        <div class="col-md-10">
+          <!--
+          <div id="welcome">
+              <img src="http://imgs.xkcd.com/comics/compiling.png" />
+          </div>
+          -->
+          <div id="error-panel" style="display: none">
+            <div class="alert alert-danger" role="alert">
+              Failed to fetch URL:
+              <p><strong class="reason"></strong><p>
+            </div>
+          </div>
+          <div id="html-src" style="display: none"></div>
+          <div id="loading-panel" style="display: none">
+            <div class="content">
+              <div class="indicator">Loading ... </div>
+              <div id="quote" class="quote">The best performance improvement is the transition from the nonworking state to the working state.</div>
+              <div id="author" class="author">J. Osterhout</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="/static/jquery-syntax/jquery.syntax.js"></script>
+  <script src="/static/jquery-syntax/jquery.syntax.cache.js"></script>
+  <script src="/static/js/tag_viewer.js"></script>
+  <script>
+  $(function() {
+    TAG_VIEWER.init();
+  });
+  </script>
+</html>

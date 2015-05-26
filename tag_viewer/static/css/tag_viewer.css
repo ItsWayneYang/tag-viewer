@@ -1,0 +1,105 @@
+div.syntax-theme-base .syntax .highlight {
+    background-color: yellow;
+}
+body {
+   font-size: 16px;
+}
+.tag-list>li>a {
+    color: #ab9ba9;
+    display: block;
+    padding: 2px 4px;
+}
+.tag-list>li>a:hover {
+    background-color: #3e313c;
+}
+.tag-list>li>a.active {
+    background-color: #4c9689;
+    color: white;
+    font-style: italic;
+    text-decoration: none;
+}
+.options {
+    padding: 8px 0;
+    color: #ddd;
+    font-size: 0.9em;
+}
+.tag-count {
+    position: absolute;
+    right: 25px;
+    padding: 2px 5px;
+    /* background-color: #ddd; */
+    color: #ddd;
+}
+.summary-panel {
+    height: 800px;
+}
+.side-panel {
+    background-color: #4d394b;
+}
+#html-src {
+    height: 800px;
+    width: 100%;
+    overflow: auto;
+    border: 1px solid #d9d9d9;
+    margin: 5px 0;
+    padding: 5px 0;
+}
+.top-header {
+    padding: 5px 0;
+}
+.top-header .logo {
+    padding: 7px 0;
+    color: white;
+    font-weight: bold;
+}
+.top-header form {
+    margin: 0;
+}
+.top-header .url-bar {
+    width: 70%;
+    display: inline-block;
+    border: 1px solid #d9d9d9;
+    height: 35px;
+    padding: 5px 5px;
+}
+.top-header .url-bar:focus {
+    outline: 1px solid blue;
+}
+.url-bar.active {
+    border: 1px solid #4d90fe;
+}
+.top-header input[type='text'] {
+    width: 100%;
+    border: 0;
+    outline: none;
+}
+.fetch-btn {
+    padding: 5px 10px;
+    border: 1px solid #3079ed;
+    color: white;
+    background-color: #4d90fe;
+}
+#loading-panel {
+    height: 100%;
+    width: 100%;
+}
+#loading-panel .content {
+    position: absolute;
+    top: 5%;
+    text-align: center;
+    width: 100%;
+    color: #4D394B;
+}
+#loading-panel .indicator {
+    font-weight: bold;
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+#loading-panel .quote {
+    font-weight: 300;
+    font-size: 2.0rem;
+}
+#loading-panel .author {
+    font-weight: 300;
+    font-size: 1.5rem;
+}
