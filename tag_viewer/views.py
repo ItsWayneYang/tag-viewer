@@ -27,7 +27,7 @@ def fetch():
         response.status_code = 500
         return response
 
-    soup = BeautifulSoup(r.text)
+    soup = BeautifulSoup(r.text, "lxml")
 
     # compute tag frequency summary
     summary = util.get_tag_count(soup.html)
