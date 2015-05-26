@@ -31,7 +31,7 @@ body {
     color: #ddd;
 }
 .summary-panel {
-    height: 800px;
+    min-height: 800px;
 }
 .side-panel {
     background-color: #4d394b;
